@@ -1,0 +1,67 @@
+.form-wrapper {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+
+  h1 {
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  h2 {
+    color: gray;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .form-fields {
+    margin-top: 5rem;
+
+    input[type=text], input[type=password] {
+      width: 100%;
+      margin-top: 0.5rem;
+      border: 0px;
+      border-bottom: 1px solid gray;
+      height: 5rem;
+      line-height: 3rem;
+      background: transparent;
+      color: #fff;
+    }
+
+    .form-selection {
+      margin-top: 1.5rem;
+      font-size: 1.5rem;
+      color: gray;
+
+      input {
+        margin-left: 10px;
+        margin-right: 4px;
+      }
+    }
+
+  }
+
+  .alert {
+    margin-top: 2rem;
+  }
+
+  .form-actions {
+    text-align: center;
+
+    .btn-form-action {
+      width: 90%;
+      display: inline-block;
+      margin-top: 3rem;
+      padding: 1.3rem 2rem;
+    }
+  }
+}
+
+.fv-form-centered {
+  margin: auto;
+  display: block;
+  text-align: center;
+}

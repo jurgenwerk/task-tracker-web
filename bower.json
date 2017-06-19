@@ -1,0 +1,7 @@
+{
+  "name": "task-tracker-web",
+  "dependencies": {},
+  "devDependencies": {
+    "bootstrap": "3.3.7"
+  }
+}

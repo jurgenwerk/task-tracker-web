@@ -1,0 +1,13 @@
+App name:
+{{input value=model.name}}
+
+<button {{action 'save' model}} class="btn-primary btn-form-action">
+  Save
+</button>
+
+{{#if model.errors.name}}
+  <br>
+  Name {{model.errors.name.firstObject.message}}
+{{/if}}
+
+{{outlet}}

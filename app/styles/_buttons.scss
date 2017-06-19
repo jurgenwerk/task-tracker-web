@@ -1,0 +1,20 @@
+$btn-primary-color: #2DB97C;
+
+.btn-primary {
+  background: $btn-primary-color;
+  border: 0px;
+  border-radius: 2px;
+  text-transform: uppercase;
+
+  &:hover, &:focus {
+    background: lighten($btn-primary-color, 8);
+  }
+
+  [disabled]:hover, &:active, &:active:focus, &:hover:active {
+    background: darken($btn-primary-color, 14);
+  }
+}
+
+.btn-primary[disabled]:hover {
+  background: darken($btn-primary-color, 14);
+}

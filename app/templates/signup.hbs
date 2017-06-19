@@ -1,0 +1,35 @@
+<div class="form-wrapper">
+  <form {{action 'signup' email password on="submit"}} class="fv-form-centered">
+    <div class="form-title">
+      <h1> Task Tracker </h1>
+      <h2> Sign up for an account </h2>
+    </div>
+
+    <div class="form-fields">
+      {{input value=email placeholder="E-mail"}}
+      {{input value=password type="password" placeholder="Password"}}
+    </div>
+
+    <div class="form-actions">
+      {{#liquid-if signupErrors}}
+        <div class="alert alert-danger">
+          {{#each signupErrors as |error|}}
+            {{error}}
+          {{/each}}
+        </div>
+      {{/liquid-if}}
+
+      <button {{action 'signup' email password}} disabled={{isSigningUp}} class="btn-primary btn-form-action">
+        {{#if isSigningUp}}
+          Signing up...
+        {{else}}
+          Sign up
+        {{/if}}
+      </button>
+    </div>
+
+    {{#link-to 'login' class="tt-link offset-top inline-block"}}
+      Already have an account?
+    {{/link-to}}
+  </form>
+</div>

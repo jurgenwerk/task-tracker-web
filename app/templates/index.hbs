@@ -1,0 +1,12 @@
+Apps:
+
+{{#each appMonitors as |appMonitor|}}
+  {{#link-to 'app-monitor' appMonitor}}
+    {{appMonitor.name}}
+  {{/link-to}}
+{{/each}}
+
+<br>
+{{#link-to 'app-monitors.new'}}
+  add app
+{{/link-to}}
