@@ -9,7 +9,9 @@ const Router = Ember.Router.extend({
 Router.map(function() {
   this.route('login');
   this.route('signup');
-  this.route('app-monitor', { path: 'apps/:app_monitor_id' });
+  this.route('app-monitor', { path: 'apps/:app_monitor_id' }, function() {
+    this.route('tasks');
+  });
   this.route('app-monitors', { path: 'apps' }, function() {
     this.route('new');
   });

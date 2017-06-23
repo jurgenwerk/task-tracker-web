@@ -1,12 +1,15 @@
-Apps:
+<div class="container">
+  <h2>Apps</h2>
+  <div class="list-group">
+    {{#each appMonitors as |appMonitor|}}
+      {{#link-to 'app-monitor.tasks' appMonitor class="list-group-item"}}
+        {{appMonitor.name}}
+      {{/link-to}}
+    {{/each}}
+  </div>
 
-{{#each appMonitors as |appMonitor|}}
-  {{#link-to 'app-monitor' appMonitor}}
-    {{appMonitor.name}}
+  <br>
+  {{#link-to 'app-monitors.new' class="btn btn-primary"}}
+    add app
   {{/link-to}}
-{{/each}}
-
-<br>
-{{#link-to 'app-monitors.new'}}
-  add app
-{{/link-to}}
+</div>
